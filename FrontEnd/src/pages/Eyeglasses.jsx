@@ -1,36 +1,30 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 import EyeBg from "../assets/Images/EyeglassesBg.jpeg"
 import {Form} from "react-bootstrap"
+import axios from 'axios'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/cartSlice'
 const Eyeglasses = () => {
-  const items = [
-    {
-        title:"Aenean eu tristique",
-        price:"$10.00 - $22.00",
-        img:"https://optic-zone-demo.zohocommerce.com/product-images/product-image-05-01.jpg/2276408000000070023/400x400"
-    },
-    {
-        title:"Alliance The Jam Sunglasses",
-        price:"$19.00 $24.00",
-        img:"https://optic-zone-demo.zohocommerce.com/product-images/product-02-01.jpeg/2276408000000070083/400x400"
-    },
-    {
-        title:"Consectetur elit",
-        price:"$12.00 - $22.00",
-        img:"https://optic-zone-demo.zohocommerce.com/product-images/product-05-01.jpeg/2276408000000073419/400x400"
-    },
-]
-
-const ans = items.map((item) => {
+  const [items, setItems] = useState([])
+  const dispatch = useDispatch()
+  useEffect(() => {
+    axios.get("http://localhost:4000/items").then((res) => {
+      setItems(res.data)
+    })
+  },[])
+  const ans = items.map((item) => {
     return(
-        <Col md={4} id="allproducts" style={{padding:"20px 40px",border:"1px dashed #c5c5c7"}} >
-            <p>{item.title}</p>
-            <p>{item.price}</p>
-       <img src={item.img} alt="" width={"100%"} /> 
-        
+      <Col md={4} id="allproducts" style={{padding:"20px 40px",border:"1px dashed #c5c5c7"}} >
+        <p>{item.title}</p>
+        <p>{item.price}</p>
+        <img src={item.img[0]} alt="" width={"100%"} style={{cursor:"pointer"}} onClick={() => {
+          dispatch(addToCart(item))
+        }} /> 
       </Col>
     )
-})
+  })
+
   return (
     <>
     <Container >

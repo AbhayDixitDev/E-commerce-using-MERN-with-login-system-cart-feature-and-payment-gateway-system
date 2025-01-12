@@ -36,7 +36,7 @@ const Checkout = () => {
     setError(null);
 
     try {
-      const { data } = await axios.post('http://localhost:5000/orders/checkout', {
+      const { data } = await axios.post('https://ecommerce-server-live-qqlrvx9mg-abhay-dixits-projects-4f073080.vercel.app/checkout', {
         cart: cart,
         amount,
         name,
