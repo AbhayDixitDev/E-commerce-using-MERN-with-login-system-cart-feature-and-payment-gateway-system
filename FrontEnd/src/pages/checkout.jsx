@@ -36,7 +36,7 @@ const Checkout = () => {
     setError(null);
 
     try {
-      const { data } = await axios.post('https://ecommerce-server-live-qqlrvx9mg-abhay-dixits-projects-4f073080.vercel.app/checkout', {
+      const { data } = await axios.post('https://new-server-live-7h374xg51-abhay-dixits-projects-4f073080.vercel.app/orders/checkout', {
         cart: cart,
         amount,
         name,
@@ -56,7 +56,7 @@ const Checkout = () => {
     } finally {
       setLoading(false);
       // Clear the cart
-      dispatch(clearCart());
+    //   dispatch(clearCart());
     }
   };
 
