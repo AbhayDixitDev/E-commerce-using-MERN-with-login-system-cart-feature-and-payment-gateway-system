@@ -18,7 +18,6 @@ const MainHeader = () => {
             <Nav.Link as={Link} to="/" style={{color:"white",padding:"10px 20px"}}>Home</Nav.Link>
             <Nav.Link as={Link} to="/sunglasses" style={{color:"white",padding:"10px 20px"}}>Sunglasses</Nav.Link>
             <Nav.Link as={Link} to="/eyeglasses" style={{color:"white",padding:"10px 20px"}}>Eyeglasses</Nav.Link>
-            <Nav.Link as={Link} to="/terms-and-conditions" style={{color:"white",padding:"10px 20px"}}>Terms and Conditions</Nav.Link>
             <Nav.Link as={Link} to="/contact-us" style={{color:"white",padding:"10px 20px"}}>Contact Us</Nav.Link>
           </Nav>
         </Navbar.Collapse>

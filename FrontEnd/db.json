@@ -1,0 +1,46 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "title": "Aenean eu tristique",
+            "price": "22.00",
+            "img": ["https://optic-zone-demo.zohocommerce.com/product-images/product-image-05-01.jpg/2276408000000070023/400x400","https://optic-zone-demo.zohocommerce.com/product-images/product-image-05-02.jpg/2276408000000070025/600x600"],
+            "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
+        },
+        {
+            "id": 2,
+            "title": "Aenean sodales",
+            "price":"15.00",
+            "img": ["https://optic-zone-demo.zohocommerce.com/product-images/product-image-05-01.jpg/2276408000000070023/400x400","https://optic-zone-demo.zohocommerce.com/product-images/product-03-02.jpeg/2276408000000070071/600x600"],
+            "description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
+        },
+        {
+            "id": 3,
+            "title": "Alliance The Jam Sunglasses",
+            "price": "19.00",
+            "img": ["https://optic-zone-demo.zohocommerce.com/product-images/product-02-01.jpeg/2276408000000070083/400x400","https://optic-zone-demo.zohocommerce.com/product-images/product-02-02.jpeg/2276408000000070085/600x600","https://optic-zone-demo.zohocommerce.com/product-images/product-02-03.jpeg/2276408000000070087/600x600"],
+            "description":""
+        },
+        {
+            "id": 4,
+            "title": "Consectetur elit",
+            "price": "22.00",
+            "img": ["https://optic-zone-demo.zohocommerce.com/product-images/product-05-01.jpeg/2276408000000073419/400x400","https://optic-zone-demo.zohocommerce.com/product-images/product-05-02.jpeg/2276408000000073421/600x600"],
+            "description":"100% Refund if you don't like the product!"
+        },
+        {
+            "id": 5,
+            "title": "Costa Del Mar Blackfin",
+            "price": "15.00",
+            "img": ["https://optic-zone-demo.zohocommerce.com/product-images/product-01-01.jpeg/2276408000000070041/400x400","https://optic-zone-demo.zohocommerce.com/product-images/product-01-01.jpeg/2276408000000070041/600x600"],
+            "description":""
+        },
+        {
+            "id": 6,
+            "title": "Medallion Marble Mosaic",
+            "price": "13.00",
+            "img":[ "https://optic-zone-demo.zohocommerce.com/product-images/product-04-01.jpeg/2276408000000070051/400x400","https://optic-zone-demo.zohocommerce.com/product-images/product-04-02.jpeg/2276408000000070053/600x600","https://optic-zone-demo.zohocommerce.com/product-images/product-04-03.jpeg/2276408000000070055/600x600"],
+            "description":""
+        }
+    ]
+}
