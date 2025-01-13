@@ -10,7 +10,12 @@ import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor } from './store';
 
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY, {
+  apiVersion: '2022-11-15',
+  loader: {
+    enabled: true,
+  },
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

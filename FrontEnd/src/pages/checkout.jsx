@@ -34,7 +34,7 @@ const Checkout = () => {
     setError(null);
 
     try {
-      const { data } = await axios.post('https://e-commerce-server-live.onrender.com/orders/checkout/stripe', {
+      const { data } = await axios.post(`${import.meta.env.VITE_SERVER_URL}/orders/checkout/stripe`, {
         cart: cart,
         amount,
         name,
@@ -54,7 +54,7 @@ const Checkout = () => {
     setError(null);
 
     try {
-      const { data } = await axios.post('https://e-commerce-server-live.onrender.com/orders/checkout/razorpay', {
+      const { data } = await axios.post(`${import.meta.env.VITE_SERVER_URL}/orders/checkout/razorpay`, {
         cart: cart,
         amount,
         name,

@@ -8,7 +8,7 @@ const Eyeglasses = () => {
   const [items, setItems] = useState([])
   const navigate = useNavigate()
   useEffect(() => {
-    axios.get("https://e-commerce-server-live.onrender.com/product").then((res) => {
+    axios.get(`${import.meta.env.VITE_SERVER_URL}/product`).then((res) => {
       setItems(res.data)
     })
   },[])

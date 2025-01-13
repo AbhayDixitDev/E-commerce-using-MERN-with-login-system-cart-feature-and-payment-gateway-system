@@ -15,8 +15,8 @@ const ProductShow = () => {
     const [loading, setLoading] = useState(true)
     const [counter, setCounter] = useState(1)
     useEffect(() => {
-        axios.get(`https://e-commerce-server-live.onrender.com/product/${id}`).then((res) => {
-            console.log(res.data)
+        axios.get(`${import.meta.env.VITE_SERVER_URL}/product/${id}`).then((res) => {
+            // console.log(res.data)
             setProduct(res.data)
             setMainImg(res.data.img[0])
             setLoading(false)
@@ -78,10 +78,10 @@ const ProductShow = () => {
             {loading ? <p>Loading...</p> : <img src={mainImg} alt="" height={"100%"} />}
 
                 </Col>
-             <Col md={12} style={{padding:"20px 0px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+             <Col key={Math.random()} md={12} style={{padding:"20px 0px",display:"flex",justifyContent:"center",alignItems:"center"}}>
                       {loading ? <p>Loading...</p> : product.img.map((item) => {
                         return(
-                            <img src={item} alt="" height={"100px"} style={{padding:"0px 10px"}} onClick={()=>{setMainImg(item)}}/>
+                            <img key={Math.random()} src={item} alt="" height={"100px"} style={{padding:"0px 10px"}} onClick={()=>{setMainImg(item)}}/>
                         )
                       })}
                     </Col>

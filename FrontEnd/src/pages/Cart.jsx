@@ -42,7 +42,7 @@ const Cart = () => {
         </Col>
       </Row>
       <Row>
-        <Col md={9} style={{borderRight:"1px dotted black"}}>
+        <Col key={Math.random()} md={9} style={{borderRight:"1px dotted black"}}>
         <Row >
                <Col md={8}>Items</Col>
                <Col md={2}>Quantity</Col>
@@ -50,7 +50,7 @@ const Cart = () => {
         </Row>
         
         {cart.map(item => (
-          <Row style={{padding:"20px 0px"}}>
+          <Row key={Math.random()} style={{padding:"20px 0px"}}>
           <Col md={8} key={item.id}>
               <Row>
                 <Col md={3}>
