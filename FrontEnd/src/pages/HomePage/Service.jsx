@@ -1,9 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import freeShip from "../../assets/images/vector4.svg"
-import support from "../../assets/images/vector7.svg"
-import offerCard from "../../assets/images/vector8.svg"
-import secure from "../../assets/images/vector5.svg"
+import freeShip from "@/assets/images/vector4.svg"
+import support from "@/assets/images/vector7.svg"
+import offerCard from "@/assets/images/vector8.svg"
+import secure from "@/assets/images/vector5.svg"
 const Service = () => {
   return (
   <>

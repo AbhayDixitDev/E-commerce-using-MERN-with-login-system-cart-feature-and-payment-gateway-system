@@ -4,11 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
 
-import App from './App.jsx'
-import store from './store'
+import App from '@/App.jsx'
+import store from '@/store'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react';
-import { persistor } from './store';
+import { persistor } from '@/store';
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY, {
   apiVersion: '2022-11-15',

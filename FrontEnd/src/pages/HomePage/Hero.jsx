@@ -1,4 +1,4 @@
-import heroImg from "../../assets/Images/heroImg.png"
+import heroImg from "@/assets/images/heroImg.png"
 import { Container, Row, Col } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';

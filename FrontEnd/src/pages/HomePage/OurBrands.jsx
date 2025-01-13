@@ -2,10 +2,10 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import brand1 from "../../assets/images/brand1.png"
-import brand2 from "../../assets/images/brand2.png"
-import brand3 from "../../assets/images/brand3.png"
-import brand4 from "../../assets/images/brand4.png"
+import brand1 from "@/assets/images/brand1.png"
+import brand2 from "@/assets/images/brand2.png"
+import brand3 from "@/assets/images/brand3.png"
+import brand4 from "@/assets/images/brand4.png"
 const OurBrands = () => {
     const [index, setIndex] = useState(0);
 

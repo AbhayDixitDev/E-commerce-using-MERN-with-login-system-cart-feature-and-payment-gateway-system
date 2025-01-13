@@ -2,8 +2,8 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import {Button} from 'react-bootstrap'
 import { Container, Row, Col } from 'react-bootstrap'
-import poster1 from "../../assets/images/poster1.jpg"
-import poster2 from "../../assets/images/poster2.jpg"
+import poster1 from "@/assets/images/poster1.jpg"
+import poster2 from "@/assets/images/poster2.jpg"
 const Posters = () => {
   return (
     <>

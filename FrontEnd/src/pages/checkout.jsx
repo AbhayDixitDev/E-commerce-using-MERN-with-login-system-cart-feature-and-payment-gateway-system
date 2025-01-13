@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { Container, Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { FaCreditCard, FaLock } from 'react-icons/fa';
-import { clearCart } from '../redux/cartSlice';
+import { clearCart } from '@/redux/cartSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import {Spinner} from 'react-bootstrap';

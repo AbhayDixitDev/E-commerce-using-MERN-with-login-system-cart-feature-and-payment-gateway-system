@@ -1,5 +1,5 @@
 import {Container, Row, Col} from 'react-bootstrap';
-import logo from "../../assets/Images/logo.png"
+import logo from "@/assets/images/logo.png"
 import { BiSearch, BiCart } from "react-icons/bi";
 import {useSelector} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
