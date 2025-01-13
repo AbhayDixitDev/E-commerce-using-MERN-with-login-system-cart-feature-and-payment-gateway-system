@@ -1,28 +1,36 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button, Modal } from 'react-bootstrap'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeFromCart, handleQuantityChange } from '../redux/cartSlice'
 import { Link } from 'react-router-dom'
 import { FaMinusSquare, FaPlusSquare } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
+import Checkout from './checkout'
 
 const Cart = () => {
   const cart = useSelector(state => state.cart.cart)
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [quantity, setQuantity] = useState(1)
+  const [showModal, setShowModal] = useState(false)
 
   useEffect(() => {
     setQuantity(1)
   }, [cart])
-
-
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id))
   }
 
   const handleCheckout = () => {
+    setShowModal(true)
+  }
+
+  const handleClose = () => {
+    setShowModal(false)
+  }
+
+  const handleProceed = () => {
     navigate("/checkout")
   }
 
@@ -58,13 +66,13 @@ const Cart = () => {
                 <table style={{border:"1px solid black", fontSize:"20px", fontFamily: "Arial Black"}} >
                   <tr style={{border:"1px solid black",textAlign:"center"}} >
                   <td style={{width:"30px",cursor:"pointer"}}
-                  onClick={() => {dispatch(handleQuantityChange({id:item.id,op:"-"}))}}
+                  onClick={() => {dispatch(handleQuantityChange({id:item._id,op:"-"}))}}
                 >
                   <FaMinusSquare />
                 </td>
                 <td style={{width:"30px",cursor:"pointer"}} className="quantity">{item.quantity}</td>
                 <td style={{width:"30px",cursor:"pointer"}}
-                  onClick={() => {dispatch(handleQuantityChange({id:item.id,op:"+"}))}}
+                  onClick={() => {dispatch(handleQuantityChange({id:item._id,op:"+"}))}}
                 >
                   <FaPlusSquare />
                 </td>
@@ -76,7 +84,7 @@ const Cart = () => {
           </Col>
 
           <Col md={12}>
-          <a onClick={() => {handleRemoveFromCart(item.id)}} style={{border:"1px groove black", textDecoration:"none", padding:"5px", display:"inline-block",cursor:"pointer"}}>Remove</a>
+          <a onClick={() => {handleRemoveFromCart(item._id)}} style={{border:"1px groove black", textDecoration:"none", padding:"5px", display:"inline-block",cursor:"pointer"}}>Remove</a>
           </Col>
         </Row>
         
@@ -110,11 +118,23 @@ const Cart = () => {
         </Row>
         </Col>
       </Row>
-      <Row>
-        <Col md={12}>
-          
-        </Col>
-      </Row>
+      <Modal show={showModal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Checkout</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Subtotal: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)}.00</p>
+          <p>Shipping and taxes will be calculated at checkout</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleProceed}>
+            Proceed to Checkout
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   )
 }

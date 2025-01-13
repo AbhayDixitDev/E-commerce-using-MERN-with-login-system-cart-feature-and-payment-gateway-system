@@ -17,7 +17,7 @@ const Middle = () => {
             </Col>
             <Col style={{textAlign:"center",alignContent:"center"}}>
                 {/* <BiSearch   style={{float:"right",fontSize:"20px"}}/> */}
-                <span style={{float:"right",fontSize:"20px"}} onClick={()=>{navigate("/cart")}}><BiCart />{ cart.length>0 && cart.length}</span>
+                <span style={{float:"right",fontSize:"20px",cursor:"pointer"}} onClick={()=>{navigate("/cart")}}><BiCart />{ cart.length>0 && cart.length}</span>
                 
                 
 

@@ -15,7 +15,7 @@ const ProductShow = () => {
     const [loading, setLoading] = useState(true)
     const [counter, setCounter] = useState(1)
     useEffect(() => {
-        axios.get(`http://localhost:4000/items/${id}`).then((res) => {
+        axios.get(`https://e-commerce-server-live.onrender.com/product/${id}`).then((res) => {
             console.log(res.data)
             setProduct(res.data)
             setMainImg(res.data.img[0])

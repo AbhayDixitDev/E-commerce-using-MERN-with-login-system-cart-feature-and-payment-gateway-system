@@ -7,7 +7,7 @@ const BestSeller = () => {
     const [ items, setItems ] = useState([])
     const navigate = useNavigate()
     useEffect(() => {
-        axios.get("http://localhost:4000/items").then((res) => {
+        axios.get("https://e-commerce-server-live.onrender.com/product").then((res) => {
             console.log(res.data)
         setItems(res.data)
 
@@ -21,7 +21,7 @@ const BestSeller = () => {
             <Col md={4} id="allproducts" style={{padding:"20px 40px",border:"1px dashed #c5c5c7"}}  >
                 <p>{item.title}</p>
                 <p>{item.price}</p>
-           <img src={item.img[0]} alt="" width={"100%"} style={{cursor:"pointer"}} onClick={()=>{navigate(`/product/${item.id}`)}}/> 
+           <img src={item.img[0]} alt="" width={"100%"} style={{cursor:"pointer"}} onClick={()=>{navigate(`/product/${item._id}`)}}/> 
             
           </Col>
         )
